@@ -29,8 +29,6 @@ The tessellation shader components:
 
 <img src="img/Tessellation.png" alt="Tessellation.png" style="zoom:67%;" />
 
-In our project, we set 9 levels of detail for our tessellation.
+In our project, we set 9 levels of detail for our tessellation:
 
-
-
-## Result
+<img src="img/LOD.gif" alt="LOD" style="zoom:80%;" />
