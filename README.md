@@ -17,7 +17,7 @@
 
 
 
-### Map the facial picture onto the head
+### Map the facial pictures onto the head
 
 ### Use PN triangle tessellation to refine the model*
 
