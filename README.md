@@ -11,19 +11,23 @@
 
 ### Integrate all functions into the GUI*
 
-![image-20230618095249458](C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230618095249458.png)
+![GUI.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/GUI.png)
 
 ### Display face geometry as a triangular mesh*
 
-
+![Face_geometry.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Face_geometry.png)
 
 ### Map the facial pictures onto the head
+
+![Face_quad.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Face_quad.png)
+
+![Face_texture.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Face_texture.png)
 
 ### Use PN triangle tessellation to refine the model*
 
 The tessellation shader components:
 
-![image-20230618095120718](C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230618095120718.png)
+![Tessellation.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Tessellation.png)
 
 In our project, we set 9 levels of detail for our tessellation.
 
