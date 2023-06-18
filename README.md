@@ -11,23 +11,23 @@
 
 ### Integrate all functions into the GUI*
 
-![GUI.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/GUI.png)
+<img src="img/GUI.png" alt="GUI.png" style="zoom:67%;" />
 
 ### Display face geometry as a triangular mesh*
 
-![Face_geometry.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Face_geometry.png)
+<img src="img/Face_geometry.png" alt="Face_geometry.png" style="zoom:67%;" />
 
 ### Map the facial pictures onto the head
 
-![Face_quad.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Face_quad.png)
+<img src="img/Face_quad.png" alt="Face_quad.png" style="zoom:67%;" />
 
-![Face_texture.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Face_texture.png)
+<img src="img/Face_texture.png" alt="Face_texture.png" style="zoom:67%;" />
 
 ### Use PN triangle tessellation to refine the model*
 
 The tessellation shader components:
 
-![Tessellation.png](https://github.com/jamesdemon923/Self_face_head/blob/main/img/Tessellation.png)
+<img src="img/Tessellation.png" alt="Tessellation.png" style="zoom:67%;" />
 
 In our project, we set 9 levels of detail for our tessellation.
 
