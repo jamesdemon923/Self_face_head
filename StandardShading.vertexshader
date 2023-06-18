@@ -3,8 +3,7 @@
 // Input vertex data, different for all executions of this shader.
 layout(location = 0) in vec4 vertexPosition_modelspace;
 layout(location = 1) in vec4 vertexColor;
-layout(location = 2) in vec3 vertexNormal;
-layout(location = 3) in vec2 vertexUV;// TL
+layout(location = 2) in vec3 vertexNormal;	// TL
 
 // Output data; will be interpolated for each fragment.
 out vec4 vs_vertexColor;
@@ -12,19 +11,22 @@ out vec3 Position_worldspace;
 out vec3 Normal_cameraspace;
 out vec3 EyeDirection_cameraspace;
 out vec3 LightDirection_cameraspace;
-out vec2 UV;
+out vec3 LightDirection_cameraspace2;
+out vec3 LightDirection_cameraspace3;
 
 // Values that stay constant for the whole mesh.
 uniform mat4 M;
 uniform mat4 V;
 uniform mat4 P;
 uniform vec3 LightPosition_worldspace;
+uniform vec3 LightPosition_worldspace2;
+uniform vec3 LightPosition_worldspace3;
 
 void main() {
 	gl_PointSize = 10.0;
 	// Output position of the vertex, in clip space : MVP * position
 	gl_Position =  P * V * M * vertexPosition_modelspace;
-
+	
 	// Position of the vertex, in worldspace : M * position
 	Position_worldspace = (M * vertexPosition_modelspace).xyz;
 	
@@ -36,13 +38,19 @@ void main() {
 	// Vector that goes from the vertex to the light, in camera space. M is ommited because it's identity.
 	vec3 LightPosition_cameraspace = (V * vec4(LightPosition_worldspace, 1.0)).xyz;
 	LightDirection_cameraspace = LightPosition_cameraspace + EyeDirection_cameraspace;
+
+	vec3 LightPosition_cameraspace2 = (V * vec4(LightPosition_worldspace2, 1.0)).xyz;
+	LightDirection_cameraspace2 = LightPosition_cameraspace2 + EyeDirection_cameraspace;
+
+	vec3 LightPosition_cameraspace3 = (V * vec4(LightPosition_worldspace3, 1.0)).xyz;
+	LightDirection_cameraspace3 = LightPosition_cameraspace3 + EyeDirection_cameraspace;
+
+
 	
 	// Normal of the the vertex, in camera space	// TL
 	Normal_cameraspace = (V * M * vec4(vertexNormal, 1.0)).xyz; // Only correct if ModelMatrix does not scale the model ! Use its inverse transpose if not.
 	
 	// UV of the vertex. No special space for this one.
 	vs_vertexColor = vertexColor;
-
-	UV = vertexUV;
 }
 
