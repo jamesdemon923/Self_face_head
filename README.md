@@ -7,7 +7,7 @@
 
 ## Pipeline (* what I did)
 
-### Create the head model in blender*
+### Create the face model in blender*
 
 ### Integrate all functions into the GUI*
 
@@ -17,7 +17,7 @@
 
 <img src="img/Face_geometry.png" alt="Face_geometry.png" style="zoom:67%;" />
 
-### Map the facial pictures onto the head
+### Map the facial pictures onto the model
 
 <img src="img/Face_quad.png" alt="Face_quad.png" style="zoom:67%;" />
 
